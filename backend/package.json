@@ -1,0 +1,18 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node-env-run src --exec nodemon | pino-colada"
+  },
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-pino-logger": "^4.0.0",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^1.18.10",
+    "pino-colada": "^1.4.4",
+    "twilio": "^3.22.0"
+  }
+}
