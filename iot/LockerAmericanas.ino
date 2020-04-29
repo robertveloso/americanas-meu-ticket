@@ -1,7 +1,7 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
  
-#define PIN_LED     2
+#define PIN_LOCK     2
  
 #define TOPICO         "topico_locker_americanas_1"
  
@@ -52,10 +52,10 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length){
     
     if (msg.equals("1"))
     {
-        digitalWrite(PIN_LED, LOW);
+        digitalWrite(PIN_LOCK, LOW);
         Serial.print("Abre Locker");
         delay(2000);
-        digitalWrite(PIN_LED, HIGH);
+        digitalWrite(PIN_LOCK, HIGH);
         Serial.print("Fecha Locker");
         
     }
@@ -111,8 +111,8 @@ void reconnectWiFi(void){
 void setup(){
     Serial.begin(115200);  
 
-    pinMode(PIN_LED, OUTPUT);
-    digitalWrite(PIN_LED,HIGH);
+    pinMode(PIN_LOCK, OUTPUT);
+    digitalWrite(PIN_LOCK,HIGH);
 
     initWiFi();
     initMQTT();
