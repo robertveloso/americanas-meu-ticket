@@ -1,0 +1,71 @@
+{
+  "destaques": [
+    {
+      "photos": [
+        "https://images-americanas.b2w.io/spacey/2020/04/20/dia_das_maes_home_destaque_mobile_fase_02.png"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "code": "1345208341",
+      "name": "Apple Watch 3",
+      "desc": "Apple Watch Series 3 GPS - 38 mm",
+      "price": "1785.00",
+      "rating": 0,
+      "reviews": 0,
+      "photos": [
+        "https://images-americanas.b2w.io/produtos/01/00/img/1345208/3/1345208350_1GG.jpg",
+        "https://images-americanas.b2w.io/produtos/01/00/img/1345208/3/1345208350_2GG.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "code": "134253960",
+      "name": "Galaxy A10 32GB",
+      "desc": "Smartphone Samsung Galaxy A10 32GB Dual Chip Android 9.0 Tela 6.2 Octa-Core 4G Câmera 13MP - Preto",
+      "price": "799.00",
+      "rating": 4,
+      "reviews": 1162,
+      "photos": [
+        "https://images-americanas.b2w.io/produtos/01/00/oferta/134253/9/134253978_1GG.jpg",
+        "https://images-americanas.b2w.io/produtos/01/00/oferta/134253/9/134253978_2GG.jpg",
+        "https://images-americanas.b2w.io/produtos/01/00/oferta/134253/9/134253978_3GG.jpg",
+        "https://images-americanas.b2w.io/produtos/01/00/oferta/134253/9/134253978_4GG.jpg",
+        "https://images-americanas.b2w.io/produtos/01/00/oferta/134253/9/134253978_5GG.jpg",
+        "https://images-americanas.b2w.io/produtos/01/00/oferta/134253/9/134253978_6GG.jpg",
+        "https://images-americanas.b2w.io/produtos/01/00/oferta/134253/9/134253978_7GG.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "code": "51486515",
+      "name": "Fone Ouvido JBL",
+      "desc": "Fone De Ouvido Bluetooth JBL Tune 500BT Preto",
+      "price": "204.15",
+      "rating": 4.5,
+      "reviews": 55,
+      "photos": [
+        "https://images-americanas.b2w.io/produtos/01/00/img/51486/5/51486518_1GG.jpg",
+        "https://images-americanas.b2w.io/produtos/01/00/img/51486/5/51486518_2GG.jpg",
+        "https://images-americanas.b2w.io/produtos/01/00/img/51486/5/51486518_3GG.jpg",
+        "https://images-americanas.b2w.io/produtos/01/00/img/51486/5/51486518_4GG.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "code": "1111111111",
+      "name": "CAMISETA SHAWEE",
+      "desc": "CAMISETA ESPECIAL SHAWEE 2 ANOS",
+      "price": "35.90",
+      "rating": 5,
+      "reviews": 99999,
+      "photos": [
+        "https://chicorei.imgix.net/16406/0c208c90-7f37-11ea-a283-8d09d7d469d7.jpg?auto=format&lossless=1&w=425&h=600&fit=crop&crop=top",
+        "https://chicorei.imgix.net/16406/0c208c91-7f37-11ea-a283-8d09d7d469d7.jpg?auto=format&lossless=1&w=425&h=600&fit=crop&crop=top",
+        "https://chicorei.imgix.net/16406/0c1fc940-7f37-11ea-a283-8d09d7d469d7.jpg?auto=format&lossless=1&w=425&h=600&fit=crop&crop=top"
+      ]
+    }
+  ]
+}

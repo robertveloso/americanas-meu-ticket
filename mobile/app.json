@@ -5,11 +5,12 @@
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/images/icon.png",
+    "scheme": "myapp",
     "splash": {
-      "image": "../.github/assets/splash.png",
+      "image": "./src/assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#E60016"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

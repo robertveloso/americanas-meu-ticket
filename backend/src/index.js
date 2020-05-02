@@ -1,15 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const pino = require('express-pino-logger')();
+var cors = require('cors');
+
 const client = require('twilio')(
   process.env.TWILIO_ACCOUNT_SID,
   process.env.TWILIO_AUTH_TOKEN
 );
 
 const app = express();
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(pino);
+app.use(cors());
 
 app.get('/api/greeting', (req, res) => {
   const name = req.query.name || 'World';
@@ -26,6 +30,7 @@ app.post('/api/messages', (req, res) => {
       body: req.body.body,
     })
     .then(() => {
+      req.log.info(JSON.stringify(req.body));
       res.send(JSON.stringify({ success: true }));
     })
     .catch((err) => {
@@ -35,5 +40,5 @@ app.post('/api/messages', (req, res) => {
 });
 
 app.listen(3333, () =>
-  console.log('🚀 Express server is running on localhost:3333')
+  console.log('🚀 Express server is running on http://localhost:3333')
 );
