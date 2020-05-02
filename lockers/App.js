@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { PersistGate } from 'redux-persist/integration/react';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import '@config/reactotron';
 import { store, persistor } from 'store';
 
 import Login from './src/screens/Login';
