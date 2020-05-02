@@ -13,6 +13,11 @@ export default function createRouter() {
   return (
     <Stack.Navigator>
       <Stack.Screen
+        name="Dashboard"
+        options={{ headerShown: false }}
+        component={DashboardRoutes}
+      />
+      <Stack.Screen
         name="SignIn"
         options={{ headerShown: false }}
         component={SignIn}
@@ -21,11 +26,6 @@ export default function createRouter() {
         name="SignUp"
         options={{ headerShown: false }}
         component={SignUp}
-      />
-      <Stack.Screen
-        name="Dashboard"
-        options={{ headerShown: false }}
-        component={DashboardRoutes}
       />
     </Stack.Navigator>
   );

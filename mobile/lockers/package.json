@@ -1,5 +1,5 @@
 {
-  "name": "lockers",
+  "name": "tickets",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",

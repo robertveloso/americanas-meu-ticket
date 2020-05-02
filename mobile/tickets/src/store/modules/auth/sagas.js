@@ -3,7 +3,7 @@ import { Alert } from 'react-native';
 import { parseISO, format } from 'date-fns';
 import { takeLatest, call, put, all } from 'redux-saga/effects';
 
-import api from 'services/api';
+import api from '@services/api';
 // import firebase from "firebase";
 
 import {

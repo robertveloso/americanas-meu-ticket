@@ -7,7 +7,7 @@ import TabBarIcon from '@components/TabBarIcon';
 
 import HomeRoutes from '@routes/Home.routes';
 
-import Login from '@screens/Login';
+import Profile from '@screens/Profile';
 import HomeScreen from '@screens/HomeScreen';
 import LinksScreen from '@screens/LinksScreen';
 
@@ -68,7 +68,7 @@ export default function Dashboard() {
         />
         <Tab.Screen
           name="Perfil"
-          component={Login}
+          component={Profile}
           options={{
             title: 'Minha conta',
             tabBarIcon: ({ focused }) => (

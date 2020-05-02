@@ -8,10 +8,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import '@config/reactotron';
-import { store, persistor } from 'store';
+import { store, persistor } from '@store';
 import App from './src/App';
 
-import useLinking from './src/routes/useLinking';
+import useLinking from '@routes/useLinking';
 
 export default function Index(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);

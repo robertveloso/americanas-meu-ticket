@@ -2,9 +2,9 @@ import React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Home from '@screen/Home';
-import Servicos from '@screen/Home';
-import Consultas from '@screen/Home';
+import Home from '@screens/Home';
+import Servicos from '@screens/Home';
+import Consultas from '@screens/Home';
 
 const Stack = createStackNavigator();
 
