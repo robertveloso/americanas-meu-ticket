@@ -2,8 +2,8 @@ import React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
-import SignIn from '@screen/SignIn';
-import SignUp from '@screen/SignUp';
+import SignIn from '@screens/SignIn';
+import SignUp from '@screens/SignUp';
 
 import DashboardRoutes from './Dashboard.routes';
 
