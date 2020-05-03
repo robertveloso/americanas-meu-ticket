@@ -94,4 +94,37 @@ export const offer = styled.View`
   padding-top: 10px;
 `;
 
+export const HighlightsBox = styled.View`
+  background: ${Colors.componentBG};
+  width: 346px;
+  height: 338px;
+  padding: 5px;
+  text-align: center;
+  flex: 1;
+  flex-direction: row;
+  align-self: center;
+  margin: 0px 20px;
+  border-radius: 5px;
+  margin: 10px;
+`;
+
+export const HighlightsTitle = styled.Text`
+  /* titleOffer */
+
+  position: absolute;
+  width: 306px;
+  height: 35px;
+  left: 17px;
+  top: 14px;
+
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 1px;
+
+  color: #000000;
+`;
+
 export const Notification = styled(SlideUp)``;

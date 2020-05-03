@@ -13,85 +13,36 @@ export const Header = styled.View`
   background: ${Colors.tintColor};
 `;
 
-export const Input = styled.TextInput`
-  margin: 20px;
-  width: 295px;
-  height: 30;
-  background: #fff;
-`;
-
-export const SectionStyle = styled.View`
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  border-width: 0.5px;
-  border-color: #000;
-  height: 40px;
-  border-radius: 5px;
-  margin: 20px;
-`;
-
-export const Notifications = styled.View`
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  background: ${Colors.tintColor};
-`;
-
-export const notificationText = styled.Text`
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 22px;
-  /* identical to box height */
-
-  text-align: right;
-  padding-right: 20px;
-
-  color: #ffffff;
-`;
-export const dateText = styled.Text`
+export const Title = styled.Text`
   font-family: Heebo;
   font-style: normal;
   font-weight: bold;
-  font-size: 22px;
-  line-height: 32px;
-  text-align: right;
-  padding-right: 20px;
+  font-size: 32px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 1px;
 
   color: #ffffff;
 `;
 
-export const timerText = styled.Text`
+export const Text = styled.Text`
   font-family: Heebo;
   font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 22px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 47px;
   /* identical to box height */
 
-  text-align: right;
-  padding-right: 20px;
+  text-align: center;
 
-  color: #ffffff;
-
-  opacity: 0.69;
+  color: #e60016;
 `;
 
-export const offers = styled.View`
-  background: ${Colors.background};
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  align-items: center;
+export const Button = styled.View`
+  margin: 20px;
+  width: 227px;
+  height: 65px;
+  background: #ffffff;
+  border-radius: 10px;
+  justify-content: center;
 `;
-
-export const offer = styled.View`
-  padding-bottom: 10px;
-  padding-top: 10px;
-`;
-
-export const Notification = styled(SlideUp)``;

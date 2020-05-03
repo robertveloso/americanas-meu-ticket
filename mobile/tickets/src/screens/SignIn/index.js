@@ -20,7 +20,7 @@ export default function SignIn() {
   const formRef = useRef(null);
 
   function handleSubmit({ email, password }, { reset }) {
-    dispatch(signInRequest(email, password));
+    dispatch(signInRequest(email, password, navigation));
     reset();
   }
 

@@ -8,8 +8,9 @@ import TabBarIcon from '@components/TabBarIcon';
 import HomeRoutes from '@routes/Home.routes';
 
 import Profile from '@screens/Profile';
-import HomeScreen from '@screens/HomeScreen';
-import LinksScreen from '@screens/LinksScreen';
+import Orders from '@screens/Orders';
+import Favorites from '@screens/Favorites';
+import ShoppingCart from '@screens/ShoppingCart';
 
 import colors from '@styles/colors';
 
@@ -38,7 +39,7 @@ export default function Dashboard() {
         />
         <Tab.Screen
           name="Orders"
-          component={HomeScreen}
+          component={Orders}
           options={{
             title: 'Compras',
             tabBarIcon: ({ focused }) => (
@@ -48,7 +49,7 @@ export default function Dashboard() {
         />
         <Tab.Screen
           name="ShoppingCart"
-          component={HomeScreen}
+          component={ShoppingCart}
           options={{
             title: 'Meu carrinho',
             tabBarIcon: ({ focused }) => (
@@ -58,7 +59,7 @@ export default function Dashboard() {
         />
         <Tab.Screen
           name="Favorites"
-          component={LinksScreen}
+          component={Favorites}
           options={{
             title: 'Favoritos',
             tabBarIcon: ({ focused }) => (

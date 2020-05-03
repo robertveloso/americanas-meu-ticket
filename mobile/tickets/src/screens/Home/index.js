@@ -8,19 +8,20 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 import logo from '@assets/images/logo.png'; // assets/images/logo.png';
 import offer from '@assets/images/offer.png'; // assets/images/logo.png';
-import appleWatch from '@assets/images/apple-watch.png'; // assets/images/logo.png';
+import alpino from '@assets/images/alpino.png';
+import negresco from '@assets/images/negresco.png';
 
 import * as S from './styles';
 import Colors from '@styles/colors';
 import Offer from '../../components/Main/Offers';
 import Covid from '../../components/Main/Covid';
-import BestSellers from '../../components/Main/Offers/BestSeller';
+import BestSeller from '../../components/Main/Offers/BestSeller';
 import Login from '../../components/Login';
 import BestBuy from '../../components/Main/Offers/BestBuy';
 
 export default function Home() {
   const slide = React.useRef();
-  const [user, setUser] = React.useState([]);
+  const [user, setUser] = React.useState();
   const signed = useSelector((state) => state.auth.signed);
   React.useEffect(() => {
     async function load() {
@@ -70,9 +71,18 @@ export default function Home() {
           <S.offers>
             <Covid />
             <Offer image={offer} />
-            <BestSellers image={appleWatch} />
+            <S.HighlightsBox>
+              <S.HighlightsTitle>os mais vendidos de hoje</S.HighlightsTitle>
+              <BestSeller image={alpino} />
+              <BestBuy image={negresco} />
+            </S.HighlightsBox>
             {!user ? <Login /> : null}
-            <BestBuy image={appleWatch} />
+
+            <S.HighlightsBox>
+              <S.HighlightsTitle>as melhores ofertas</S.HighlightsTitle>
+              <BestBuy image={alpino} />
+              <BestBuy image={negresco} />
+            </S.HighlightsBox>
           </S.offers>
         </View>
       </S.ScrollView>
