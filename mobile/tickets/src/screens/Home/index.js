@@ -73,15 +73,14 @@ export default function Home() {
             <Offer image={offer} />
             <S.HighlightsBox>
               <S.HighlightsTitle>os mais vendidos de hoje</S.HighlightsTitle>
-              <BestSeller image={alpino} />
-              <BestBuy image={negresco} />
+              <BestSeller image={alpino} title={'alpino'} price={'2,00'} />
+              <BestSeller image={negresco} title={'negresco'} price={'3,00'} />
             </S.HighlightsBox>
-            {!user ? <Login /> : null}
-
+            {!signed ? <Login /> : null}
             <S.HighlightsBox>
               <S.HighlightsTitle>as melhores ofertas</S.HighlightsTitle>
-              <BestBuy image={alpino} />
-              <BestBuy image={negresco} />
+              <BestBuy image={alpino} title={'alpino'} price={'2,00'} />
+              <BestBuy image={negresco} title={'negresco'} price={'3,00'} />
             </S.HighlightsBox>
           </S.offers>
         </View>

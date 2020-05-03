@@ -1,6 +1,8 @@
 import { registerRootComponent } from 'expo';
 import 'react-native-gesture-handler';
 import * as React from 'react';
+import * as Sentry from 'sentry-expo';
+
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Provider } from 'react-redux';
 import firebase from 'firebase';
@@ -23,7 +25,15 @@ export default function Index(props) {
   const containerRef = React.useRef();
   const { getInitialState } = useLinking(containerRef);
 
-  var firebaseConfig = {
+  Sentry.init({
+    dsn:
+      'https://2b54fc8b03cc466d9616c461234ca0b4@o309087.ingest.sentry.io/5222295',
+    enableInExpoDevelopment: true,
+    debug: true,
+  });
+  Sentry.captureMessage('Hello Sentry from Lockers');
+
+  const firebaseConfig = {
     apiKey: 'AIzaSyDdVUoR3k34VTXLMUmV5TO7o5Ns-f7OuMg',
     authDomain: 'safe-92595.firebaseapp.com',
     databaseURL: 'https://safe-92595.firebaseio.com',

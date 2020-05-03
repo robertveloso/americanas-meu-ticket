@@ -27,7 +27,7 @@ export function* singUp({ payload }) {
 
     yield firebase.auth().currentUser.updateProfile(update);
 
-    console.tron.log('result', response);
+    __DEV__ && console.tron.log('result', response);
 
     //created_at: format(parseISO(response.data.created_at), 'dd/MM/yyyy'),
 
@@ -61,7 +61,7 @@ export function* singIn({ payload, navigation }) {
       .auth()
       .signInWithEmailAndPassword(email, password);
 
-    console.tron.log('result', response);
+    __DEV__ && console.tron.log('result', response);
 
     yield put(
       signInSuccess(response.user.uid, {

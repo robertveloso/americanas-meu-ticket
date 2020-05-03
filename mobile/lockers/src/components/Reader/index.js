@@ -29,7 +29,7 @@ export default function Reader() {
     const response = await api.post('/api/scan', {
       code: data,
     });
-    console.tron.log('Reader', response.data);
+    __DEV__ && console.tron.log('Reader', response.data);
     if (response.data.result === true) {
       navigation.navigate('LockerProduct');
     } else {
@@ -50,12 +50,12 @@ export default function Reader() {
       <S.View>
         <BarCodeScanner
           onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-          style={{ flex: 1 }}
-          type={BarCodeScanner.Constants.Type.back}
+          style={{ flex: 0.9 }}
+          type={BarCodeScanner.Constants.Type.front}
         />
         <S.Touch onPress={() => setScanned(false)}>
           {scanned ? (
-            <S.Text>Código: {data}</S.Text>
+            <S.Text>código verificado com sucesso</S.Text>
           ) : (
             <S.Text>aponte o QRCode para a tela</S.Text>
           )}

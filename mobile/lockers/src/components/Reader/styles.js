@@ -44,6 +44,5 @@ export const Text = styled.Text`
   letter-spacing: 1px;
   color: ${Colors.text};
   text-align: center;
-  margin: 30px;
   margin-top: 10px;
 `;

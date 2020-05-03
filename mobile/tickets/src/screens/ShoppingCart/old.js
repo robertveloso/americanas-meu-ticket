@@ -11,7 +11,7 @@ export default function ShoppingCart() {
       to: '+5538999880075',
       body: 'Olá Robert!',
     });
-    console.tron.log(response);
+    __DEV__ && console.tron.log(response);
   };
   return (
     <S.SafeAreaView>

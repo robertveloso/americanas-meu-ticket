@@ -17,11 +17,11 @@ export default function Login() {
       <S.productInfo>
         <S.buyInfo>
           <S.Label>Produto</S.Label>
-          <S.Text>Apple Watch S3</S.Text>
+          <S.Text>Alpino</S.Text>
         </S.buyInfo>
         <S.buyInfo>
           <S.Label>Valor</S.Label>
-          <S.Text>R$ 1.785,00</S.Text>
+          <S.Text>R$ 2,00</S.Text>
         </S.buyInfo>
 
         <S.row>
@@ -41,7 +41,7 @@ export default function Login() {
           </S.left>
           <S.right>
             <S.Label>Parcelamento</S.Label>
-            <S.Text>6x383,33</S.Text>
+            <S.Text>1x2,00</S.Text>
           </S.right>
         </S.row>
         <S.row>

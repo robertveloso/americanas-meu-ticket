@@ -5,6 +5,7 @@ import { takeLatest, call, put, all } from 'redux-saga/effects';
 
 import api from '@services/api';
 import firebase from 'firebase';
+import * as Sentry from 'sentry-expo';
 
 import {
   signUpSuccess,
@@ -13,7 +14,7 @@ import {
   signFailure,
 } from './actions';
 
-export function* singUp({ payload }) {
+export function* singUp({ payload, navigation }) {
   try {
     const { email, password, displayName } = payload;
     const response = yield firebase
@@ -27,7 +28,7 @@ export function* singUp({ payload }) {
 
     yield firebase.auth().currentUser.updateProfile(update);
 
-    console.tron.log('result', response);
+    __DEV__ && console.tron.log('result', response);
 
     //created_at: format(parseISO(response.data.created_at), 'dd/MM/yyyy'),
 
@@ -41,9 +42,11 @@ export function* singUp({ payload }) {
     );
     navigation.navigate('Home');
   } catch (err) {
+    Sentry.captureMessage('Erro on SignUp', err);
     Alert.alert(
       'Falha na autenticação',
-      'Houve um erro no cadastro, verifique seus dados'
+      JSON.stringify(err)
+      // 'Houve um erro no cadastro, verifique seus dados'
     );
     yield put(signUpFailure());
   }
@@ -61,7 +64,7 @@ export function* singIn({ payload, navigation }) {
       .auth()
       .signInWithEmailAndPassword(email, password);
 
-    console.tron.log('result', response);
+    __DEV__ && console.tron.log('result', response);
 
     yield put(
       signInSuccess(response.user.uid, {
@@ -75,9 +78,11 @@ export function* singIn({ payload, navigation }) {
     navigation.navigate('Home');
     // history.push('/dashboard');
   } catch (err) {
+    Sentry.captureMessage('Erro on SignIn', err);
     Alert.alert(
       'Falha na autenticação',
-      'Houve um erro no login, verifique seus dados'
+      JSON.stringify(err)
+      //'Houve um erro no login, verifique seus dados'
     );
     yield put(signFailure());
   }

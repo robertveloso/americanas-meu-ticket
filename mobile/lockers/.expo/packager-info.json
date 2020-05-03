@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 37629,
-  "expoServerNgrokUrl": "https://3g-6c5.robertveloso.lockers.exp.direct",
-  "packagerNgrokUrl": "https://packager.3g-6c5.robertveloso.lockers.exp.direct",
-  "ngrokPid": 37670
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }

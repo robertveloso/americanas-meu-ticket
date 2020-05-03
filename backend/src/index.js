@@ -18,7 +18,6 @@ app.use(pino);
 app.use(cors());
 
 const key = 'troublemakers';
-const randomcode = 'AX01';
 const hash = bcrypt.hashSync(key, 8);
 
 app.post('/api/scan', (req, res) => {
@@ -59,7 +58,7 @@ app.post('/api/messages', (req, res) => {
 app.post('/api/2fa', (req, res) => {
   res.header('Content-Type', 'application/json');
 
-  if (req.body.code === '17XC') {
+  if (req.body.code === '1835') {
     // abrindo locker
     var client = mqtt.connect('mqtt://mqtt.eclipse.org/mqtt', {
       port: 1883,
