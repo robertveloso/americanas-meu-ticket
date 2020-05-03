@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Image, StatusBar } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -12,8 +12,7 @@ import colors from '@styles/colors';
 
 import * as S from './styles';
 
-export default function SignUp() {
-  const [visibility, setVisibility] = useState(true);
+export default function OTP() {
   const navigation = useNavigation();
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.auth.loading);
@@ -38,29 +37,7 @@ export default function SignUp() {
         <Form ref={formRef} onSubmit={handleSubmit}>
           <S.InputBox style={{ marginTop: 37.5 }}>
             <MaterialIcons
-              name="person"
-              size={30}
-              color={'red'}
-              style={{ position: 'relative', marginTop: 15, marginRight: 5 }}
-            />
-            <S.Name
-              name="displayName"
-              keyboardType="default"
-              placeholder="Informe seu nome"
-              autoCorrect={false}
-              returnKeyType="send"
-              autoCapitalize="none"
-            />
-            <MaterialIcons
-              name="email"
-              size={30}
-              color="#fff"
-              style={{ opacity: 0, marginLeft: 5 }}
-            />
-          </S.InputBox>
-          <S.InputBox>
-            <MaterialIcons
-              name="email"
+              name="call"
               size={30}
               color={'red'}
               style={{ position: 'relative', marginTop: 15, marginRight: 5 }}
@@ -68,48 +45,23 @@ export default function SignUp() {
             <S.User
               name="email"
               keyboardType="email"
-              placeholder="Informe seu email"
+              placeholder="Informe o código recebido"
               autoCorrect={false}
               returnKeyType="send"
               autoCapitalize="none"
             />
             <MaterialIcons
-              name="email"
+              name="call"
               size={30}
               color="#fff"
               style={{ opacity: 0, marginLeft: 5 }}
             />
           </S.InputBox>
-          <S.InputBox>
-            <MaterialIcons
-              name="lock"
-              size={30}
-              color={'red'}
-              style={{ position: 'relative', marginTop: 15, marginRight: 5 }}
-            />
-            <S.Password
-              name="password"
-              keyboardType="default"
-              placeholder="Informe sua senha"
-              autoCorrect={false}
-              returnKeyType="send"
-              autoCapitalize="none"
-              secureTextEntry={visibility}
-            />
-            <S.Touch onPress={() => setVisibility(!visibility)}>
-              <MaterialIcons
-                name={visibility ? 'visibility' : 'visibility-off'}
-                size={30}
-                color={'red'}
-                style={{ position: 'relative', marginTop: 15, marginLeft: 5 }}
-              />
-            </S.Touch>
-          </S.InputBox>
           <S.SubmitButton
             loading={loading}
             onPress={() => formRef.current.submitForm()}
           >
-            cadastrar
+            confirmar código
           </S.SubmitButton>
         </Form>
       </S.Container>

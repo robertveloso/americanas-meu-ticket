@@ -1,10 +1,11 @@
 import { Alert } from 'react-native';
+// import { useNavigation } from '@react-navigation/native';
 
 import { parseISO, format } from 'date-fns';
 import { takeLatest, call, put, all } from 'redux-saga/effects';
 
 import api from '@services/api';
-// import firebase from "firebase";
+import firebase from 'firebase';
 
 import {
   signUpSuccess,
@@ -15,7 +16,7 @@ import {
 
 export function* singUp({ payload }) {
   try {
-    /*const { email, password, displayName } = payload;
+    const { email, password, displayName } = payload;
 
     const response = yield firebase
       .auth()
@@ -28,7 +29,7 @@ export function* singUp({ payload }) {
 
     yield firebase.auth().currentUser.updateProfile(update);
 
-    console.tron.log("result", response);
+    console.tron.log('result', response);
 
     //created_at: format(parseISO(response.data.created_at), 'dd/MM/yyyy'),
 
@@ -39,7 +40,7 @@ export function* singUp({ payload }) {
         name: response.user.displayName,
         created_at: response.user.createdAt,
       })
-    );*/
+    );
   } catch (err) {
     Alert.alert(
       'Falha na autenticação',
@@ -51,7 +52,8 @@ export function* singUp({ payload }) {
 
 export function* singIn({ payload }) {
   try {
-    /*const { email, password } = payload;
+    const { email, password } = payload;
+    // const navigation = useNavigation();
 
     // const response = yield call(api.get, `home/${id}`);
 
@@ -72,8 +74,8 @@ export function* singIn({ payload }) {
       })
     );
 
+    // navigation.navigate('Profile');
     // history.push('/dashboard');
-    */
   } catch (err) {
     Alert.alert(
       'Falha na autenticação',

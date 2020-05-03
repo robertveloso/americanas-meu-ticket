@@ -2,6 +2,8 @@ import styled from '@emotion/native';
 
 import Colors from '@styles/colors';
 
+export const Touch = styled.TouchableOpacity``;
+
 export const Image = styled.Image``;
 
 export const Title = styled.Text`
@@ -34,6 +36,7 @@ export const bestSellers = styled.View`
   align-self: center;
   margin: 0px 20px;
   border-radius: 5px;
+  margin: 10px;
 `;
 
 export const bestSellersProduct = styled.View`

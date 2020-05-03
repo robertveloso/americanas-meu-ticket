@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import { useSelector } from 'react-redux';
 import tailwind from 'tailwind-rn';
-import firebase from 'firebase';
 
 import { FontAwesome5 } from '@expo/vector-icons';
 
@@ -20,15 +18,6 @@ import BestBuy from '../../components/Main/Offers/BestBuy';
 
 export default function Home() {
   const slide = React.useRef();
-  const [user, setUser] = React.useState([]);
-  const signed = useSelector((state) => state.auth.signed);
-  React.useEffect(() => {
-    async function load() {
-      const response = await firebase.auth().currentUser;
-      setUser(response);
-    }
-    load();
-  }, [signed]);
   const exampleContent = () => {
     return (
       <View style={tailwind('h-full w-full')}>
@@ -71,7 +60,7 @@ export default function Home() {
             <Covid />
             <Offer image={offer} />
             <BestSellers image={appleWatch} />
-            {!user ? <Login /> : null}
+            <Login />
             <BestBuy image={appleWatch} />
           </S.offers>
         </View>
@@ -85,7 +74,3 @@ export default function Home() {
     </S.SafeAreaView>
   );
 }
-
-Home.navigationOptions = {
-  header: null,
-};

@@ -4,7 +4,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from '@screens/Home';
 import Servicos from '@screens/Home';
-import Consultas from '@screens/Home';
+import Product from '@screens/Product';
+
+import QRCode from '@screens/QRCode';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +21,8 @@ export default function HomeRoutes() {
         },
         headerTintColor: '#fff',
         headerTransparent: true,
+        headerShown: false,
+        //headerShown: false,
       }}
       initialRouteName="Home"
     >
@@ -36,12 +40,20 @@ export default function HomeRoutes() {
         component={Servicos}
       />
       <Stack.Screen
-        name="Products"
+        name="Product"
         options={{
           title: 'Produto',
           headerShown: false,
         }}
-        component={Consultas}
+        component={Product}
+      />
+      <Stack.Screen
+        name="QRCode"
+        options={{
+          title: 'QRCode',
+          headerShown: false,
+        }}
+        component={QRCode}
       />
     </Stack.Navigator>
   );

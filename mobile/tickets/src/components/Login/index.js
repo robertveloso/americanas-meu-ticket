@@ -5,12 +5,8 @@ import * as S from './styles';
 
 export default function Login() {
   const navigation = useNavigation();
-  const onPress = () => {
-    navigation.navigate('Login');
-  };
-
   return (
-    <S.Touch onPress={onPress}>
+    <S.Touch onPress={() => navigation.navigate('SignIn')}>
       <S.auth>
         <S.authTitle>olá, seja bem-vindo</S.authTitle>
         <S.authDesc>

@@ -4,6 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import SignIn from '@screens/SignIn';
 import SignUp from '@screens/SignUp';
+import Recover from '@screens/Recover';
+import OTP from '@screens/OTP';
 
 import DashboardRoutes from './Dashboard.routes';
 
@@ -19,13 +21,35 @@ export default function createRouter() {
       />
       <Stack.Screen
         name="SignIn"
-        options={{ headerShown: false }}
+        options={{
+          title: 'Login',
+          headerShown: true,
+        }}
         component={SignIn}
       />
       <Stack.Screen
         name="SignUp"
-        options={{ headerShown: false }}
+        options={{
+          title: 'Inscreva-se',
+          headerShown: true,
+        }}
         component={SignUp}
+      />
+      <Stack.Screen
+        name="Recover"
+        options={{
+          title: 'Recuperar senha',
+          headerShown: true,
+        }}
+        component={Recover}
+      />
+      <Stack.Screen
+        name="OTP"
+        options={{
+          title: 'Entrar com número',
+          headerShown: true,
+        }}
+        component={OTP}
       />
     </Stack.Navigator>
   );
