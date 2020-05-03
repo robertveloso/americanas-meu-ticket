@@ -32,7 +32,6 @@ app.post('/api/scan', (req, res) => {
 });
 
 app.get('/api/generate', (req, res) => {
-  // tickets, qrcode
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ result: hash }));
 });
@@ -75,11 +74,9 @@ app.post('/api/2fa', (req, res) => {
         }
       });
     });
-
-    console.log('MQTT RESPONSE: ', locker);
   } else res.send(JSON.stringify({ result: false }));
 });
 
-app.listen(3333, () =>
-  console.log('🚀 Express server is running on http://localhost:3333')
+app.listen(process.env.PORT || 3333, () =>
+  console.log('🚀 Express server is running')
 );
