@@ -16,6 +16,8 @@
     "twilio": "^3.22.0"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "mqtt": "^4.0.0"
   }
 }

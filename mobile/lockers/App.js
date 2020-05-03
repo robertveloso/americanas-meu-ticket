@@ -69,7 +69,7 @@ export default function Index(props) {
   } else {
     return (
       <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+        {Platform.OS === 'ios' && <StatusBar barStyle="#E60016" />}
         <NavigationContainer
           ref={containerRef}
           initialState={initialNavigationState}

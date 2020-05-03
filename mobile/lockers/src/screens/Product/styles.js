@@ -1,114 +1,95 @@
-import styled from '@emotion/native';
+import styled, { css } from '@emotion/native';
 
 import Colors from '@styles/colors';
 
-export const Touch = styled.TouchableOpacity``;
-
-export const Image = styled.Image`
-  width: 137px;
-  height: 167px;
+export const SafeAreaView = styled.SafeAreaView`
+  background: ${Colors.background};
+  justify-content: center;
 `;
 
-export const productImage = styled.View``;
+export const ScrollView = styled.ScrollView``;
 
-export const Title = styled.Text`
-  /* titleOffer */
-
-  margin: 10px;
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 35px;
-  letter-spacing: 1px;
-
-  color: #000000;
+export const Header = styled.View`
+  background: ${Colors.tintColor};
 `;
 
-export const bestSellers = styled.View`
-  background: ${Colors.componentBG};
-  width: 346px;
-  height: 338px;
-  padding: 5px;
-  text-align: center;
-  flex: 1;
-  align-self: center;
+export const Input = styled.TextInput`
+  margin: 20px;
+  width: 295px;
+  height: 30;
+  background: #fff;
+`;
 
+export const SectionStyle = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-width: 0.5px;
+  border-color: #000;
+  height: 40px;
   border-radius: 5px;
-  margin: 10px;
+  margin: 20px;
 `;
 
-export const bestSellersProduct = styled.View`
-  margin-right: 5px;
-  margin-left: 5px;
+export const Notifications = styled.View`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background: ${Colors.tintColor};
 `;
 
-export const productCode = styled.Text`
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 18px;
-  color: #c4c4c4;
-`;
-
-export const bestSellersProductTitle = styled.Text`
+export const notificationText = styled.Text`
   font-family: Heebo;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 22px;
+  /* identical to box height */
 
-  /* Text Primary */
+  text-align: right;
+  padding-right: 20px;
 
-  color: #000000;
+  color: #ffffff;
 `;
-
-export const productValue = styled.Text`
+export const dateText = styled.Text`
   font-family: Heebo;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 23px;
+  font-size: 22px;
+  line-height: 32px;
   text-align: right;
-  color: #000000;
-  margin-top: 15px;
+  padding-right: 20px;
+
+  color: #ffffff;
 `;
-export const productValueAME = styled.Text`
+
+export const timerText = styled.Text`
   font-family: Heebo;
   font-style: normal;
-  font-weight: bold;
-  font-size: 8px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height */
 
   text-align: right;
-  color: #000000;
-`;
-export const productValueCashBack = styled.Text`
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 10px;
+  padding-right: 20px;
 
-  text-align: right;
-  color: #40cd28;
+  color: #ffffff;
+
+  opacity: 0.69;
 `;
-export const productBuy = styled.Text`
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 23px;
-  text-align: right;
-  color: #e60016;
-  margin-top: 15px;
-  margin-bottom: 15px;
+
+export const offers = styled.View`
+  background: ${Colors.background};
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
 `;
-export const productDesc = styled.Text`
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 11px;
-  line-height: 23px;
-  text-align: right;
-  color: #000000;
+
+export const offer = styled.View`
+  padding-bottom: 10px;
+  padding-top: 10px;
 `;

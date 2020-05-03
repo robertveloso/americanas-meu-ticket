@@ -1,49 +1,13 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
-import { useSelector } from 'react-redux';
+import tailwind from 'tailwind-rn';
 
 import * as S from './styles';
+import Order from '@components/Order';
 
-import alpino from '@assets/images/alpino.png';
-
-export default function BestBuy() {
-  const navigation = useNavigation();
-  const signed = useSelector((state) => state.auth.signed);
-
-  const handleBuy = () => {
-    if (signed) {
-      navigation.navigate('Orders');
-    } else {
-      navigation.navigate('SignIn');
-    }
-  };
-
+export default function Home() {
   return (
-    <S.bestSellers>
-      <S.Title>
-        Apple Watch Series 3 GPS - 42mm - Caixa cinza-espacial de alumínio com
-        pulseira esportiva
-      </S.Title>
-      <S.bestSellersProduct>
-        <S.productCode>(Cód. 1345208595)</S.productCode>
-        <S.productImage>
-          <S.Image source={alpino} />
-        </S.productImage>
-        <S.productValue>R$ 1.785,00</S.productValue>
-        <S.productValueAME>
-          em até 12x sem juros no cartão de crédito com AME e receba R$ 42,38
-        </S.productValueAME>
-        <S.productValueCashBack>(2% de volta)</S.productValueCashBack>
-        <S.Touch onPress={() => handleBuy()}>
-          <S.productBuy>comprar</S.productBuy>
-        </S.Touch>
-        <S.productDesc>
-          O novo Apple Watch Series 3 está avançado em todos os sentidos! Com
-          GPS e novo altímetro integrados, o ele registra todas as suas
-          atividades ao ar livre. O app Exercício atualizado incluí opções de
-          treino de alta intensidade em inte...
-        </S.productDesc>
-      </S.bestSellersProduct>
-    </S.bestSellers>
+    <S.SafeAreaView style={tailwind('h-full w-full flex')}>
+      <Order />
+    </S.SafeAreaView>
   );
 }

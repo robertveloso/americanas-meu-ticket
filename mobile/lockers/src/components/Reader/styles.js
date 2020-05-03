@@ -20,36 +20,10 @@ export const Image = styled.Image`
 
 export const View = styled.View`
   flex: 1;
-  margin-top: 80px;
+  margin-top: 30px;
   margin-left: 20px;
   margin-right: 20px;
-`;
-
-export const productInfo = styled.View`
-  flex-direction: column;
-  margin-left: 20px;
-  margin-right: 20px;
-`;
-
-export const buyInfo = styled.View`
-  flex-direction: row;
-  align-items: baseline;
-  margin-top: 10px;
-`;
-
-export const row = styled.View`
-  flex-direction: row;
-  margin-top: 20px;
-`;
-
-export const left = styled.View`
-  display: flex;
-  flex: 1;
-  align-items: flex-start;
-`;
-export const right = styled.View`
-  display: flex;
-  align-items: flex-end;
+  border-radius: 10px;
 `;
 
 export const Label = styled.Text`
@@ -64,19 +38,12 @@ export const Label = styled.Text`
 export const Text = styled.Text`
   font-family: Heebo;
   font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 35px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
   letter-spacing: 1px;
   color: ${Colors.text};
-`;
-
-export const Input = styled.TextInput`
-  border-bottom-color: #000;
-  border-bottom-width: 1px;
-  border-bottom: 1px solid #000;
-  margin: 20px;
-  padding: 1px;
-  align-self: center;
   text-align: center;
+  margin: 30px;
+  margin-top: 10px;
 `;

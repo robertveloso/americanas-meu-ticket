@@ -38,7 +38,7 @@ export const Text = styled.Text`
   color: #e60016;
 `;
 
-export const Button = styled.View`
+export const Button = styled.TouchableOpacity`
   margin: 20px;
   width: 227px;
   height: 65px;

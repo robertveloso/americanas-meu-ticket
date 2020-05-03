@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const pino = require('express-pino-logger')();
 var cors = require('cors');
+var bcrypt = require('bcryptjs');
+var mqtt = require('mqtt');
 
 const client = require('twilio')(
   process.env.TWILIO_ACCOUNT_SID,
@@ -15,10 +17,25 @@ app.use(bodyParser.json());
 app.use(pino);
 app.use(cors());
 
-app.get('/api/greeting', (req, res) => {
-  const name = req.query.name || 'World';
+const key = 'troublemakers';
+const randomcode = 'AX01';
+const hash = bcrypt.hashSync(key, 8);
+
+app.post('/api/scan', (req, res) => {
+  const code = req.body.code;
+  const result = bcrypt.compareSync(key, code); // true
   res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify({ greeting: `Hello ${name}!` }));
+  if (result) {
+    res.send(JSON.stringify({ result: true }));
+  } else {
+    res.send(JSON.stringify({ result: false }));
+  }
+});
+
+app.get('/api/generate', (req, res) => {
+  // tickets, qrcode
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify({ result: hash }));
 });
 
 app.post('/api/messages', (req, res) => {
@@ -37,6 +54,31 @@ app.post('/api/messages', (req, res) => {
       console.log(err);
       res.send(JSON.stringify({ success: false }));
     });
+});
+
+app.post('/api/2fa', (req, res) => {
+  res.header('Content-Type', 'application/json');
+
+  if (req.body.code === '17XC') {
+    // abrindo locker
+    var client = mqtt.connect('mqtt://mqtt.eclipse.org/mqtt', {
+      port: 1883,
+      clientId: 'lockers_test',
+    });
+
+    const locker = client.on('connect', function () {
+      client.subscribe('topico_locker_americanas_1', function (err) {
+        if (!err) {
+          client.publish('topico_locker_americanas_1', '1');
+          console.log('Locker aberto');
+          res.send(JSON.stringify({ result: true }));
+          client.end();
+        }
+      });
+    });
+
+    console.log('MQTT RESPONSE: ', locker);
+  } else res.send(JSON.stringify({ result: false }));
 });
 
 app.listen(3333, () =>
