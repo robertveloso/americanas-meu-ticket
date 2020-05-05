@@ -14,7 +14,6 @@
 <a href="https://bit.ly/3b0bRqv">Figma</a></br>
 <a href="https://bit.ly/35pe8u6">GitHub</a></br>
 <a href="https://bit.ly/3dg2Drl">Kanban</a></br>
-<a href="https://bit.ly/35w6s9h">Drive</a></br>
 <a href="https://bit.ly/2WmvQKz">Roteiro Pitch</a></br>
 <a href="https://bit.ly/2YqWjt7">Slides Pitch</a></br>
 <a href="https://bit.ly/3bV5Psl">Slides</a></br>
